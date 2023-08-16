@@ -20,3 +20,4 @@ runner=TestRunner(suite, filename="{}report1.html".format(time_mat),
                  desc="前程贷项目测试生产的报告",
                  templates=1)
 runner.run()
+#这是我在本地添加的
