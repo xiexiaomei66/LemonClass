@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9c93faa-3dcc-44e6-b9cc-ac924c281626" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/send_email.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="API_learing.iws" />
@@ -636,7 +635,13 @@
       <option name="project" value="LOCAL" />
       <updated>1692342960717</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="send_email">
+      <created>1692348692338</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692348692338</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -709,7 +714,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add captions in run file2" />
     <MESSAGE value="add captions in run file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add captions in run file" />
+    <MESSAGE value="send_email" />
+    <option name="LAST_COMMIT_MESSAGE" value="send_email" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
