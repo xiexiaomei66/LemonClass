@@ -11,7 +11,7 @@ import os
 #encoding=utf-8
 
 # pytest.main(['--alluredir=allure-results'])
-pytest.main(["--alluredir=reports"])
+pytest.main(["--alluredir=allure-results"])
 # os.system('allure-report')
-os.system('allure serve reports')
+os.system('allure serve allure-results')
 
