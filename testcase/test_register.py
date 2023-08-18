@@ -50,6 +50,8 @@ class TestRegister(unittest.TestCase):
         response = requests.request(url=url, method=method, headers=headers, json=param)
         # 断言
         res = response.json()
+        print("expected====",expected)
+        print("res====",res)
         try:
             self.assertEqual(expected["code"], res["code"])
             self.assertEqual(expected["msg"], res["msg"])

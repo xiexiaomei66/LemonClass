@@ -48,7 +48,7 @@ class TestLogin(unittest.TestCase):
             self.assertEqual(expected["msg"], res["msg"])
 
         except AssertionError as e:
-            log.error("用例---{}---执行不通过".format(item["title"]))
+            log.error("用例---{}---执行失败".format(item["title"]))
             print(e)
             raise e
         else:

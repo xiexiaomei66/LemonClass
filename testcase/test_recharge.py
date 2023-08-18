@@ -5,18 +5,19 @@ Time：2023/8/6 0006  下午 23:44
 Email:630906365@qq.com
 ====================
 '''
-import unittest
-from unittestreport import ddt, list_data
-from common.handle_excel import Excel
-from common.handle_path import DATA_DIR
 import os
-from common.handle_conf import conf
-from common.login import login
-from jsonpath import jsonpath
+import unittest
+
 import requests
-from common.handle_log import log
+from jsonpath import jsonpath
+from unittestreport import ddt, list_data
+
+from common.handle_conf import conf
 from common.handle_db import db
-from decimal import Decimal
+from common.handle_excel import Excel
+from common.handle_log import log
+from common.handle_path import DATA_DIR
+from tools.init_env import InitEnvData
 
 
 @ddt
@@ -25,9 +26,10 @@ class TestRecharge(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.res = login(conf.get("test","mobile_recharge"),conf.get("test","pwd_recharge"))
-        cls.token = jsonpath(cls.res, "$..token")[0]
-        cls.member_id = jsonpath(cls.res, "$..id")[0]
+
+        cls.res = InitEnvData().login(conf.get("test_data","mobile_recharge"),conf.get("test_data","pwd_recharge"))
+        cls.token,cls.member_id = cls.res
+
 
     excel = Excel(os.path.join(DATA_DIR, "cases_data.xlsx"), "recharge").read_data()
 

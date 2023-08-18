@@ -5,18 +5,20 @@ Time：2023/8/10 0010  上午 0:00
 Email:630906365@qq.com
 ====================
 '''
+import os
 import unittest
+from decimal import Decimal
+
+import requests
+from jsonpath import jsonpath
+from unittestreport import ddt, list_data
+
+from common.handle_conf import conf
+from common.handle_db import db
 from common.handle_excel import Excel
 from common.handle_log import log
-from common.handle_conf import conf
 from common.handle_path import DATA_DIR
-import os
-from unittestreport import ddt, list_data
-from common.login import login
-from jsonpath import jsonpath
-import requests
-from common.handle_db import db
-from decimal import Decimal
+from tools.init_env import InitEnvData
 
 
 @ddt
@@ -26,10 +28,9 @@ class TestWithdraw(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.res = login(conf.get("test","mobile_withdraw"),conf.get("test","pwd_withdraw"))
-        cls.token = jsonpath(cls.res, "$..token")[0]
-        cls.member_id = jsonpath(cls.res, "$..id")[0]
-        # print(cls.member_id)
+        cls.res = InitEnvData().login(conf.get("test_data", "mobile_withdraw"), conf.get("test_data", "pwd_withdraw"))
+        cls.token, cls.member_id = cls.res
+
 
     @list_data(excel)
     def test_withdraw(self, case):
@@ -45,7 +46,7 @@ class TestWithdraw(unittest.TestCase):
         # 请求接口前查询余额
         sql = case["sql"]
         if sql:
-            s_money =Decimal(db.find_data(sql.format(self.member_id))[0]["leave_amount"])
+            s_money = Decimal(db.find_data(sql.format(self.member_id))[0]["leave_amount"])
 
         # if case["title"] == "提现金额大于余额":
         #     sql="SELECT leave_amount FROM future.member where id={}"
@@ -57,16 +58,16 @@ class TestWithdraw(unittest.TestCase):
         response = requests.request(method=method, url=url, json=param, headers=headers)
         res = response.json()
 
-        print(expected)
-        print(res)
+        print("expected====",expected)
+        print("res====",res)
 
         # 断言
         try:
             self.assertEqual(expected["code"], res["code"])
             self.assertEqual(expected["msg"], res["msg"])
             if sql:
-                e_money =Decimal(db.find_data(sql.format(self.member_id))[0]["leave_amount"])
-                self.assertEqual(param["amount"],float(s_money - e_money))
+                e_money = Decimal(db.find_data(sql.format(self.member_id))[0]["leave_amount"])
+                self.assertEqual(param["amount"], float(s_money - e_money))
                 # print(Decimal(s_money - e_money))
 
             log.info("用例---{}---执行通过".format(case["title"]))
