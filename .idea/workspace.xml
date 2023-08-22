@@ -636,7 +636,13 @@
       <option name="project" value="LOCAL" />
       <updated>1692676872498</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="delete start">
+      <created>1692677075565</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1692677075565</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -711,7 +717,8 @@
     <MESSAGE value="add captions in run file" />
     <MESSAGE value="send_email" />
     <MESSAGE value="add allure report" />
-    <option name="LAST_COMMIT_MESSAGE" value="add allure report" />
+    <MESSAGE value="delete start" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
