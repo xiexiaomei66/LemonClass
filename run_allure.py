@@ -13,5 +13,5 @@ import os
 # pytest.main(['--alluredir=allure-results'])
 pytest.main(["--alluredir=allure-results"])
 # os.system('allure-report')
-os.system('allure serve allure-results')
+# os.system('allure serve allure-results')
 
