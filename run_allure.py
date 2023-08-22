@@ -13,5 +13,6 @@ import os
 # pytest.main(['--alluredir=allure-results'])
 pytest.main(["--alluredir=allure-results"])
 # os.system('allure-report')
+#自动打开报告
 # os.system('allure serve allure-results')
 
