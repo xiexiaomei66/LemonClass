@@ -82,8 +82,8 @@
       <file leaf-file-name="run_allure.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_allure.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30608696">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.53565216">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -642,7 +642,19 @@
       <option name="project" value="LOCAL" />
       <updated>1692677075565</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="delete start">
+      <created>1692677184045</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1692677184045</updated>
+    </task>
+    <task id="LOCAL-00012" summary="delete start report">
+      <created>1692677226813</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692677226813</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -718,7 +730,8 @@
     <MESSAGE value="send_email" />
     <MESSAGE value="add allure report" />
     <MESSAGE value="delete start" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete start" />
+    <MESSAGE value="delete start report" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete start report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1135,8 +1148,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run_allure.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30608696">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.53565216">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
